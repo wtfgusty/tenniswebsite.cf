@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Players</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+
+
+    <link rel="icon" href="">
+   
+
+</head> 
+<body class="">
+<!-- NAV BAR-->
+<nav class="flex items-center w-full h-24 select-none fixed z-40 " x-data="{ showMenu: false }" style="background-color: #17263B;">
+    <div class="relative flex flex-wrap items-center justify-between w-full h-24 mx-auto font-medium md:justify-center">
+        <a href="#_" class="w-1/4 py-4 pl-6 pr-4 md:pl-4 md:py-0">
+            <span class="p-1 text-xl font-black leading-none text-white select-none"><span>Tennis</span></span>
+        </a>
+        <div class="fixed top-0 left-0 z-40 items-center hidden w-full h-full p-3 text-xl bg-slate-900 bg-opacity-50 md:text-sm lg:text-base md:w-3/4 md:bg-transparent md:p-0 md:relative md:flex" :class="{'flex': showMenu, 'hidden': !showMenu }">
+            <div class="flex-col w-full h-auto h-full overflow-hidden bg-gray-900 rounded-lg select-none md:bg-transparent md:rounded-none md:relative md:flex md:flex-row md:overflow-auto">
+                <div class="flex flex-col items-center justify-center w-full h-full mt-12 text-center text-indigo-200 md:text-indigo-200 md:w-2/3 md:mt-0 md:flex-row md:items-center">
+                    <a href="./index.html" onclick="" class="inline-block px-0 px-4 py-2 mx-2 font-medium text-left md:px-0 hover:text-white md:hover:text-white lg:mx-3 md:text-center">Home</a>
+                    <a href="./index1.html" onclick="" class="inline-block px-0 px-4 py-2 mx-2 font-medium text-left md:px-0 hover:text-white md:hover:text-white lg:mx-3 md:text-center">About Tennis</a>
+                    <a href="./index2.html" onclick="" class="inline-block px-0 px-4 py-2 mx-2 font-medium text-left md:px-0 hover:text-white md:hover:text-white lg:mx-3 md:text-center">Fastest Shots</a>
+                    <a href="./index3.html" class="inline-block px-4 py-2 mx-2 font-medium text-left text-white md:text-white md:px-0 lg:mx-3 md:text-center">Pro Players</a>
+                </div>
+                <div class="flex flex-col items-center justify-end w-full h-full pt-4 md:w-1/3 md:flex-row md:py-0">
+                </div>
+            </div>
+        </div>
+        <div @click="showMenu = !showMenu" class="absolute right-0 z-50 flex flex-col items-end w-10 h-10 p-2 mr-4 rounded-full cursor-pointer md:hidden hover:bg-gray-900 hover:bg-opacity-10 text-gray-100" :class="{ 'text-gray-400': showMenu, 'text-gray-100': !showMenu }">
+            <svg class="w-6 h-6" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg class="w-6 h-6" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<!--slideshow-->
+<section class="whitespace-nowrap">
+  <div class="relative w-[600px] mx-auto22">
+      <div class="slide relative">
+          <img class="w-full h-[300px] object-cover"
+               src="./assets/css/images/alcarazpro.webp">
+          <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Carlos Alcaraz - The World's Youngest Ever Number One</div>
+      </div>
+
+      <div class="slide relative">
+          <img class="w-full h-[300px] object-cover"
+               src="./assets/css/images/nadalpro.webp">
+          <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Rafael Nadal - One of the Big Three; Produces the most topspin in the entire game, has won 25 Grand Slams.
+          </div>
+      </div>
+
+      <div class="slide relative">
+          <img class="w-full h-[300px] object-cover"
+               src="./assets/css/images/ruudpro.jpg">
+          <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Casper Ruud - World Number Four, Only took 7 years to become one of the best players in the world.
+          </div>
+      </div>
+
+      <div class="slide relative">
+        <img class="w-full h-[300px] object-cover"
+             src="./assets/css/images/augerpro.jpg">
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Felix Auger-Alliassime - Upcoming 21 Year old, Currently ranked world number Eight. Insanely fast serve, powerful forehand/backhand.
+        </div>
+    </div>
+
+      <!-- The previous button -->
+      <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+         onclick="moveSlide(-1)">❮</a>
+
+      <!-- The next button -->
+      <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+         onclick="moveSlide(1)">❯</a>
+
+  </div>
+  <!-- Javascript code -->
+  <script>
+      // set the default active slide to the first one
+      let slideIndex = 1;
+      showSlide(slideIndex);
+
+      // change slide with the prev/next button
+      function moveSlide(moveStep) {
+          showSlide(slideIndex += moveStep);
+      }
+
+      // change slide with the dots
+      function currentSlide(n) {
+          showSlide(slideIndex = n);
+      }
+
+      function showSlide(n) {
+          let i;
+          const slides = document.getElementsByClassName("slide");
+          const dots = document.getElementsByClassName('dot');
+
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+
+          // hide all slides
+          for (i = 0; i < slides.length; i++) {
+              slides[i].classList.add('hidden');
+          }
+
+          // remove active status from all dots
+          for (i = 0; i < dots.length; i++) {
+              dots[i].classList.remove('bg-yellow-500');
+              dots[i].classList.add('bg-green-600');
+          }
+
+          // show the active slide
+          slides[slideIndex - 1].classList.remove('hidden');
+
+          // highlight the active dot
+          dots[slideIndex - 1].classList.remove('bg-green-600');
+          dots[slideIndex - 1].classList.add('bg-yellow-500');
+      }
+  </script>
+</section>
+<!-- Top 3 Players-->
+<div class="antialiased w-full h-full bg-black text-gray-400 font-inter p-10">
+    <div class="container px-4 mx-auto">
+      <div>
+        <div id="title" class="text-center my-10">
+          <h1 class="font-bold text-4xl text-white">The Top 3 Players of All Time</h1>
+          <p class="text-light text-gray-500 text-xl">
+            Rafael Nadal, Novak Djokovic, and Roger Federer.
+          </p>
+        </div>
+        <!-- Nadal-->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-10 pt-10"
+        >
+          <div
+            id="plan"
+            class="rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in"
+          >
+            <div id="title" class="w-full py-5 border-b border-gray-800">
+              <h2 class="font-bold text-3xl text-white">Rafael Nadal</h2>
+              <h3 class="font-normal text-indigo-500 text-xl mt-2">
+                Aggressive baseliner + Counter-Puncher
+              </h3>
+            </div>
+            <div id="content" class="">
+              <div id="icon" class="my-5">
+
+                <p class="text-gray-500 text-sm pt-2">
+                  Special Stroke: Forehand
+                </p>
+              </div>
+              <div id="contain" class="leading-8 mb-10 text-lg font-light">
+                <ul>
+                  <li>22 Grand Slams</li>
+                  <li>Best On: Clay</li>
+                  <li>Average Forehand Speed: 80 MPH</li>
+                  <li>Average Serve Speed: 116 MPH</li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Djokovic-->
+          <div
+            id="plan"
+            class="rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in"
+          >
+            <div id="title" class="w-full py-5 border-b border-gray-800">
+              <h2 class="font-bold text-3xl text-white">Novak Djokovic</h2>
+              <h3 class="font-normal text-indigo-500 text-xl mt-2">
+                Aggressive Counter-Puncher
+              </h3>
+            </div>
+            <div id="content" class="">
+              <div id="icon" class="my-5">
+             
+                <p class="text-gray-500 text-sm pt-2">
+                  All of his strokes are equally as good
+                </p>
+              </div>
+              <div id="contain" class="leading-8 mb-10 text-lg font-light">
+                <ul>
+                  <li>21 Grand Slams</li>
+                  <li>Best On: Hardcourt</li>
+                  <li>Average Forehand Speed: 80 MPH</li>
+                  <li>Average Serve Speed: 114 MPH</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <!--Federer-->
+          <div
+            id="plan"
+            class="rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in"
+          >
+            <div id="title" class="w-full py-5 border-b border-gray-800">
+              <h2 class="font-bold text-3xl text-white">Roger Federer</h2>
+              <h3 class="font-normal text-indigo-500 text-xl mt-2">
+                Aggressive Baseliner
+              </h3>
+            </div>
+            <div id="content" class="">
+              <div id="icon" class="my-5">
+               
+                <p class="text-gray-500 text-sm pt-2">
+                  Special Stroke: Backhand
+                </p>
+              </div>
+              <div id="contain" class="leading-8 mb-10 text-lg font-light">
+                <ul>
+                  <li>20 Grand Slams</li>
+                  <li>Best On: Grass</li>
+                  <li>Average Forehand Speed: 78 MPH</li>
+                  <li>Average Serve Speed: 122 MPH</li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- End of Webpage -->
+<section class="text-gray-700 bg-black body-font">
+    <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+        <a href="#" class="text-xl font-black leading-none text-white select-none logo">Back to Top</a>
+
+        </p>
+        <br>
+        <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© Sunnyvale, California - tailwindcss
+        </p>
+        <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
+        
+            <a href="https://instagram.com/wtfgusty" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+
+            
+        </span>
+    </div>
+</section>
+
+<!-- AlpineJS Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js"></script>
+
+</body>
+</html>
